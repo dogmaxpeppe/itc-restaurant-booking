@@ -1,0 +1,36 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Sorbillo",
+      "address": "Via dei Tribunali, Napoli",
+      "email": "info@sorbillo.it",
+      "type": 1
+    },
+    {
+      "id": 2,
+      "name": "London Calling",
+      "address": "Via dei Gigli, Balestropoli",
+      "email": "londoncalling@bmail.com",
+      "type": 2
+    },
+    {
+      "name": "Di Matteo",
+      "address": "Via dei Tribunali",
+      "email": "info@dimatteo.it",
+      "type": "1",
+      "id": 3
+    }
+  ],
+  "restaurant_types": [
+    {
+      "id": 1,
+      "name": "Pizzeria"
+    },
+    {
+      "id": 2,
+      "name": "Irish Pub"
+    }
+  ],
+  "users": []
+}

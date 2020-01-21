@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" [ngClass]="{'error': !form.controls.name.valid && !form.controls.name.pristine}">
+  </div>
+
+  <div>
+    <label for="address">Address</label>
+    <input id="address" type="text" formControlName="address" [ngClass]="{'error': !form.controls.address.valid && !form.controls.address.pristine}">
+  </div>
+
+  <div>
+    <label for="email">E-Mail</label>
+    <input id="email" type="email" formControlName="email" [ngClass]="{'error': !form.controls.email.valid && !form.controls.email.pristine}">
+  </div>
+
+  <div>
+    <label for="type">Restaurant Type</label>
+    <select id="type" formControlName="type">
+      <option value="1">Pizzeria</option>
+      <option value="2">Pub</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="submit">
+  </div>
+</form>
