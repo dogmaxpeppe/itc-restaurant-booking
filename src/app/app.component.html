@@ -1,3 +1,3 @@
-<app-restaurant-list></app-restaurant-list>
+<app-restaurant-list [refreshList]="refreshListActivator"></app-restaurant-list>
 <hr>
-<app-restaurant-create></app-restaurant-create>
+<app-restaurant-create (refreshList)="refreshList($event)"></app-restaurant-create>

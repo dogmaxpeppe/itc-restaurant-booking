@@ -1,0 +1,6 @@
+<div id="details-box">
+  <div *ngIf="restaurant.name"><label>Name: </label>{{restaurant.name}}</div>
+  <div *ngIf="restaurant.address"><label>Address: </label>{{restaurant.address}}</div>
+  <div *ngIf="restaurant.email"><label>E-Mail: </label><a href="mailto:{{restaurant.email}}">{{restaurant.email}}</a></div>
+  <div *ngIf="restaurant.type"><label>Type: </label>{{restaurant$.getType(restaurant.type)}}</div>
+</div>

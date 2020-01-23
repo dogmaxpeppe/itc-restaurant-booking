@@ -1,3 +1,5 @@
 <ul *ngFor="let restaurant of restaurants">
-  <li>{{ restaurant.name }}</li>
+  <li (click)="setRestaurant(restaurant)">{{ restaurant.name }}</li>
 </ul>
+
+<app-restaurant-details *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></app-restaurant-details>

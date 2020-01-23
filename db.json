@@ -18,8 +18,15 @@
       "name": "Di Matteo",
       "address": "Via dei Tribunali",
       "email": "info@dimatteo.it",
-      "type": "1",
+      "type": 1,
       "id": 3
+    },
+    {
+      "name": "Sustable",
+      "address": "Via Stanzio",
+      "email": "sustable@gmail.com",
+      "type": 2,
+      "id": 4
     }
   ],
   "restaurant_types": [

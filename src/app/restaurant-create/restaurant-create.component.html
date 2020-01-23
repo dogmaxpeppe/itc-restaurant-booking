@@ -17,8 +17,7 @@
   <div>
     <label for="type">Restaurant Type</label>
     <select id="type" formControlName="type">
-      <option value="1">Pizzeria</option>
-      <option value="2">Pub</option>
+      <option *ngFor="let type of restaurant$.getTypes()" value="{{type.id}}">{{type.name}}</option>
     </select>
   </div>
 
