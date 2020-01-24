@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { RestaurantCreateComponent } from './restaurant-create/restaurant-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantListComponent,
     RestaurantCreateComponent,
-    RestaurantDetailsComponent
+    RestaurantDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

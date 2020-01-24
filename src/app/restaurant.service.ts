@@ -35,8 +35,8 @@ export class RestaurantService {
     }
   }
 
-  get(): Observable<Restaurant[]> {
-    return this.http.get<Restaurant[]>(this.url);
+  get(id?): Observable<Restaurant & Restaurant[]> {
+    return this.http.get<Restaurant & Restaurant[]>(this.url + (id ? id : ''));
   }
 
   create(restaurant: Restaurant): Observable<Restaurant> {

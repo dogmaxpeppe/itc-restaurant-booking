@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Restaurant } from '../restaurant';
 import { RestaurantService } from '../restaurant.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-create',
@@ -11,7 +12,11 @@ import { RestaurantService } from '../restaurant.service';
 export class RestaurantCreateComponent implements OnInit {
   @Output() refreshList = new EventEmitter();
   private form;
-  constructor(private fb: FormBuilder, private restaurant$: RestaurantService) {
+  constructor(
+    private fb: FormBuilder,
+    private restaurant$: RestaurantService,
+    private router: Router
+  ) {
     this.form = this.fb.group({
       name: [null, Validators.required],
       address: [null, Validators.required],
@@ -34,8 +39,9 @@ export class RestaurantCreateComponent implements OnInit {
       };
 
       this.restaurant$.create(restaurant).subscribe(data => {
-        alert(`The restaurant ${data.name} with ID: ${data.id} has been created correctly`);
-        this.refreshList.emit(true);
+        this.router.navigateByUrl('/restaurants').then(() => {
+          alert(`The restaurant ${data.name} with ID: ${data.id} has been created correctly`);
+        });
       }, error => {
         alert(error);
       });

@@ -1,3 +1,13 @@
-<app-restaurant-list [refreshList]="refreshListActivator"></app-restaurant-list>
+<h1>Restaurant App</h1>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="active">Home</a>
+    </li>
+    <li>
+      <a routerLink="/restaurants/create" routerLinkActive="active">Create</a>
+    </li>
+  </ul>
+</nav>
 <hr>
-<app-restaurant-create (refreshList)="refreshList($event)"></app-restaurant-create>
+<router-outlet></router-outlet>

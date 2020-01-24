@@ -27,6 +27,20 @@
       "email": "sustable@gmail.com",
       "type": 2,
       "id": 4
+    },
+    {
+      "name": "Pizzeria Stella",
+      "address": "Via Argine",
+      "email": "stella@stella.stella",
+      "type": 1,
+      "id": 5
+    },
+    {
+      "name": "Pub",
+      "address": "Via Pub",
+      "email": "pub@pub.it",
+      "type": 2,
+      "id": 6
     }
   ],
   "restaurant_types": [

@@ -1,5 +1,5 @@
 <ul *ngFor="let restaurant of restaurants">
-  <li (click)="setRestaurant(restaurant)">{{ restaurant.name }}</li>
+  <li>
+    <a routerLink="/restaurants/{{ restaurant.id }}">{{ restaurant.name }}</a>
+  </li>
 </ul>
-
-<app-restaurant-details *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></app-restaurant-details>
